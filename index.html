@@ -8,7 +8,17 @@
   <title>Poke-Battle</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false" onload="zzcatfishclose();">
+    <script language=JavaScript> var message="";
+     function clickIE4(){ if (event.button==2){ alert(message);
+      return false; } } 
+      function clickNS4(e){ if (document.layers||document.getElementById&&!document.all)
+      { if (e.which==2||e.which==3){ alert(message); return false; } } } 
+      if (document.layers){ document.captureEvents(Event.MOUSEDOWN); 
+      document.onmousedown=clickNS4; } else
+       if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; }
+        document.oncontextmenu=new Function("alert(message);return false") </script>
+  
 <div class="welcome-introduction">
   <h1 style="margin-bottom: 25px;">Welcome</h1>
   <p>This is your new Gameboy </p>
